@@ -91,11 +91,15 @@
     <orderEntry type="jdk" jdkName="Android API 22 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="appcompat-v7-22.1.0" level="project" />
+    <orderEntry type="library" exported="" name="okio-1.6.0" level="project" />
     <orderEntry type="library" exported="" name="rxbinding-0.4.0" level="project" />
+    <orderEntry type="library" exported="" name="okhttp-3.2.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-22.1.0" level="project" />
     <orderEntry type="library" exported="" name="Bmob_Push_V0.6beta_20150408" level="project" />
+    <orderEntry type="library" exported="" name="retrofit-2.0.0" level="project" />
     <orderEntry type="library" exported="" name="rxandroid-1.1.0" level="project" />
     <orderEntry type="library" exported="" name="rxjava-1.1.2" level="project" />
+    <orderEntry type="library" exported="" name="glide-3.5.2" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-23.1.0" level="project" />
   </component>
 </module>
