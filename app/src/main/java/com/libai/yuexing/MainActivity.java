@@ -1,19 +1,52 @@
 package com.libai.yuexing;
 
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MainActivity extends AbstractBaseActivity {
-
+    private Toolbar toolbar;
+    private DrawerLayout drawer;
+    private ActionBarDrawerToggle drawerToggle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initToolBar();
+        initDrawer();
 
     }
+
+    private void initDrawer() {
+        drawer=(DrawerLayout)super.findViewById(R.id.drawer);
+        //drawer¼àÌýÊÂ¼þ
+        drawerToggle=new ActionBarDrawerToggle(this,drawer,toolbar,R.string.open_drawer,R.string.close_drawer){
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+            }
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+            }
+        };
+        //Sync the toggle state after onRestoreInstanceState has occurred.
+        drawerToggle.syncState();
+        drawer.setDrawerListener(drawerToggle);
+    }
+
+    private void initToolBar() {
+        toolbar = (Toolbar)super.findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
